@@ -48,7 +48,7 @@ nav a:hover {
 .hero-content {
   width: 100%;
   min-height: 650px;
-  background-image: url('../images/build.jpeg');
+  background-image: url('../images/worker.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,16 +61,41 @@ nav a:hover {
   font-family: 'Segoe UI';
   margin-top: 0.5px;
   box-sizing: border-box;
+    color: #f9f4ef; 
+}
+
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-content h1, .hero-content p {
+  position: relative;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
 }
 
 .hero-content h1 {
-  color: maroon;
-  margin-right: 150px;
-  font-size: 50px;
-  width: 30%;
-  text-align: center;
+  font-size: 3rem;
+  color: #f9f4ef;
 }
 
+.hero-content h1 span {
+  color: maroon; /* highlight KOECOM */
+  background-color: #f9f4ef;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.hero-content p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #f9f4ef;
+  max-width: 600px;
+}
 
 
 
@@ -200,4 +225,24 @@ img{
     align-items: flex-start;
     position: absolute;
     top:22px;
+}
+
+
+.hero-content h1, .hero-content p {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/*who we are*/
+.we{
+    background-color:  #f9f4ef;
+    width: 516px;
+    height: 475px;
+    margin-left:10px;
+
 }
