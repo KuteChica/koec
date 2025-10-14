@@ -443,6 +443,14 @@ nav a:hover {
 .footer-about, .footer-links, .footer-contact {
   flex: 1 1 250px;
 }
+.footer-about img{
+      width: 90px;
+  height: 90px;
+  display: flex;
+  margin: 10px;
+right: ;
+
+}
 
 .footer h3, .footer h4 {
   color: rgb(124, 32, 32); /* your page maroon color */
