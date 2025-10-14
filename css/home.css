@@ -54,7 +54,6 @@ nav a:hover {
 .hero-content {
   width: 100%;
   min-height: 650px;
-  background-image: url('../images/worker.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,6 +70,9 @@ nav a:hover {
   position: relative; /* important for overlay */
   overflow: hidden;
   margin-top: 70px;
+    animation: slideBackground 20s infinite ease-in-out;
+    transition: background-image 1s ease-in-out;
+
 }
 
 /* DARK OVERLAY */
@@ -111,6 +113,26 @@ nav a:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideBackground {
+    0%{
+         background-image: url('../images/worker.jpg');
+    }
+  25% {
+    background-image: url('../images/worker1.jpg');
+  }
+  50% {
+    background-image: url('../images/construction2.jpg');
+  }
+  75% {
+    background-image: url('../images/interior1.jpeg');
+  }
+  100% {
+    background-image: url('../images/smart.jpeg');
+  }
+  125% {
+    background-image: url('../images/mordern.jpeg');
+  }
 }
 
 /* ===== BIG CONTAINER ===== */
@@ -237,7 +259,7 @@ nav a:hover {
 }
 
 /* ===== IMAGE ===== */
-img {
+.bigcontainer img {
   width: 90px;
   height: 90px;
   display: flex;
