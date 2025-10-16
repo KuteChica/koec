@@ -1,0 +1,331 @@
+/* ===== BODY ===== */
+body {
+  background-color: rgb(124, 32, 32);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* keeps header centered on all screens */
+  display: flex;
+  justify-content: center; /* centers nav and logo */
+  align-items: center;
+  padding: 10px 30px;
+  background-color: maroon;
+  flex-wrap: wrap;
+  width: 1390px; /* your original width */
+  height: 40px; /* your original height */
+  margin-top: 0;
+  border-radius: 10px;
+  z-index: 1000; /* makes sure it stays on top */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* optional nice shadow */
+}
+
+
+/* ===== NAVIGATION ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; /* helps on smaller screens */
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f5b342;
+  color: white;
+}
+/* ===== HERO SECTION ===== */
+
+
+
+/* ===== BIG CONTAINER ===== */
+.bigcontainer {
+  background-color: #f9f4ef;
+  border-radius: 30px;
+  width: 1450px;
+  margin: 10px auto;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+/* ===== LOGO TEXT ===== */
+.log {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: maroon;
+  letter-spacing: 9px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
+               0 0 12px rgba(128, 0, 0, 0.7);
+  transition: all 0.3s ease;
+  margin: 0;
+  margin-left: 100px;
+  font-style: italic;
+}
+
+.log:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+               0 0 25px rgba(128, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+/* ===== IMAGE ===== */
+.bigcontainer img {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 58px;
+}
+/*our services*/
+ 
+
+.main-services {
+  background-color: snow;
+  padding: 70px 40px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: maroon;
+  overflow: hidden;
+}
+
+.main-services h1 {
+  font-size: 60px;
+  font-style: oblique;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Service grid */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Service card */
+.service-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 25px;
+  width: 340px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Delay each box slightly */
+.service-box:nth-child(1) { animation-delay: 0.2s; }
+.service-box:nth-child(2) { animation-delay: 0.4s; }
+.service-box:nth-child(3) { animation-delay: 0.6s; }
+.service-box:nth-child(4) { animation-delay: 0.8s; }
+.service-box:nth-child(5) { animation-delay: 1s; }
+.service-box:nth-child(6) { animation-delay: 1.2s; }
+
+.service-box:hover {
+  transform: translateY(-6px);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Header (icon + title) */
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.service-header img {
+  width: 45px;
+  height: 45px;
+}
+
+.service-header h2 {
+  font-size: 22px;
+  color: maroon;
+  margin: 0;
+}
+
+/* Paragraph text */
+.service-box p {
+  font-size: 16px;
+  color:maroon;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* === Fade Up Animation === */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .service-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-services h1 {
+    font-size: 45px;
+  }
+
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+  }
+
+  .service-header {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .service-header img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .service-box p {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer part*/
+.footer {
+  background-color: #f4e3d7;  /* soft cream */
+  color: rgb(90, 20, 20);     /* dark maroon text */
+  padding: 50px 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  gap: 30px;
+
+}
+
+.footer-about, .footer-links, .footer-contact {
+  flex: 1 1 250px;
+}
+.footer-about img{
+      width: 90px;
+  height: 90px;
+  display: flex;
+  margin: 10px;
+
+
+}
+
+.footer h3, .footer h4 {
+  color: rgb(124, 32, 32); /* your page maroon color */
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.footer p {
+  line-height: 1.6;
+  color: rgb(70, 20, 20); /* darker maroon for readability */
+  font-size: 14px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgb(90, 20, 20);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #b45c3c; /* warm brownish-maroon accent */
+}
+
+.footer-contact a {
+  color: #b45c3c;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+  color: rgb(124, 32, 32);
+}
+
+.social-icons a {
+  color: rgb(90, 20, 20);
+  margin-right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #b45c3c;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(90, 20, 20, 0.3);
+  margin-top: 40px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: rgb(90, 20, 20);
+  opacity: 0.9;
+}
