@@ -201,3 +201,210 @@ nav a:hover {
   color: rgb(90, 20, 20);
   opacity: 0.9;
 }
+
+/* ===== PROJECT HERO ===== */
+.project-hero {
+  position: relative;
+  background: url('/images/our.jpg') center/cover no-repeat;
+  color: #f9f4ef;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 10px;
+    width: 100%;
+  min-height: 650px;
+  animation: fadeDown 1.2s ease;
+  overflow: hidden;
+  margin-top: 0;
+
+}
+
+/* Create the dark overlay */
+.project-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* darker overlay */
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* Keep the text above the overlay */
+.project-hero h1,
+.project-hero p {
+  position: relative;
+  z-index: 2;
+}
+
+
+.project-hero h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.project-hero p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* ===== FEATURED PROJECTS SECTION ===== */
+.projects-section {
+  background-color: #f9f4ef;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1300px;
+  margin: 60px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.projects-section h2 {
+  font-size: 55px;
+  color: maroon;
+  font-style: oblique;
+  margin-bottom: 40px;
+}
+
+/* === Horizontal Layout === */
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+/* === Individual Card === */
+.project-card {
+  flex: 1 1 22%; /* about 4 cards per row */
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 18px rgba(128, 0, 0, 0.25);
+}
+
+/* === Image === */
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* === Info Box === */
+.project-info {
+  padding: 15px 20px;
+}
+
+.project-info h3 {
+  color: maroon;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+  .project-card {
+    flex: 1 1 45%; /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%; /* 1 per row */
+  }
+}
+
+
+/* ===== FEATURED PROJECT ===== */
+.featured-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4e3d7;
+  margin: 60px auto;
+  padding: 50px 20px;
+  border-radius: 15px;
+  gap: 40px;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.featured-project img {
+  width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(124, 32, 32, 0.3);
+}
+
+.featured-text {
+  max-width: 500px;
+}
+
+.featured-text h2 {
+  color: maroon;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.featured-text p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: maroon;
+  color: #f9f4ef;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f5b342;
+  color: maroon;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .featured-project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featured-project img {
+    width: 100%;
+  }
+
+  .project-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
