@@ -473,3 +473,123 @@ nav a:hover {
   color: rgb(90, 20, 20);
   opacity: 0.9;
 }
+/* ===== ICON + IMAGE RESPONSIVE FIXES ===== */
+
+/* Universal icon rules: works for <img>, <i> (font icons), and inline SVG */
+.icon,
+.service-header img,
+.footer-about img,
+.social-icons img,
+nav .icon,
+i.fas, i.fab, i.far, svg {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;           /* images scale proportionally */
+  width: auto;            /* allow sizing via font-size for font icons */
+  vertical-align: middle; /* keeps icons aligned with text */
+}
+
+/* If you're using font-icons (FontAwesome etc.), control size with font-size */
+.service-header i,
+.social-icons i,
+footer i,
+.header-icons i {
+  font-size: 1.6rem;   /* default size — adjust if you want larger/smaller */
+  line-height: 1;      /* avoid extra vertical space */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* For icon images inside service-header: constrain and center */
+.service-header img {
+  width: 48px;         /* desktop default */
+  height: 48px;
+  object-fit: contain;
+  border-radius: 6px;  /* optional */
+}
+
+/* Footer icon image sizing */
+.footer-about img {
+  width: 72px;         /* desktop default */
+  height: 72px;
+  object-fit: cover;
+}
+
+/* Social icons - keep touch-friendly size and spacing */
+.social-icons a,
+.social-icons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  margin-right: 8px;
+  font-size: 1.1rem; /* font-icon size */
+}
+
+/* Prevent the absolute positioned bigcontainer image from overlapping on smaller screens */
+@media (max-width: 900px) {
+  .bigcontainer img {
+    position: static;  /* moves into normal flow on small screens */
+    margin: 0 auto 20px; /* center it above content */
+    display: block;
+  }
+
+  /* Reduce icon image sizes on narrow screens */
+  .service-header img {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-about img {
+    width: 64px;
+    height: 64px;
+  }
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  /* Font icons slightly smaller and centered with text */
+  .service-header i {
+    font-size: 1.3rem;
+  }
+
+  /* Make service-text spacing friendlier on phones */
+  .service-text {
+    padding: 18px;
+  }
+}
+
+/* Further small-screen polish (phones) */
+@media (max-width: 480px) {
+  .service-header img {
+    width: 34px;
+    height: 34px;
+  }
+  .log {
+    font-size: 1.9rem;
+    letter-spacing: 4px;
+  }
+  .social-icons a {
+    width: 34px;
+    height: 34px;
+    margin-right: 6px;
+  }
+}
+
+/* Optional: ensure nav icons (if any) don't wrap awkwardly */
+nav {
+  gap: 20px;
+  align-items: center;
+}
+
+/* Optional helper class you can add to any icon element to make it responsive */
+.responsive-icon {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}

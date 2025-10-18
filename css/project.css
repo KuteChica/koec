@@ -408,3 +408,167 @@ nav a:hover {
     align-items: center;
   }
 }
+/* ===== MOBILE RESPONSIVE FIXES ===== */
+
+/* General page scaling */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* prevent sideways scrolling */
+}
+
+/* Header and navigation */
+@media (max-width: 1024px) {
+  header {
+    width: 100%;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .log {
+    margin-left: 0;
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+  }
+
+  .bigcontainer {
+    width: 95%;
+  }
+
+  .bigcontainer img {
+    position: static;
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .project-hero {
+    padding: 70px 20px;
+    min-height: 500px;
+  }
+
+  .project-hero h1 {
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+  }
+
+  .project-hero p {
+    font-size: 1.1rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .featured-project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featured-project img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about img {
+    margin: 0 auto 15px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .log {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  .bigcontainer {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .project-hero {
+    padding: 60px 15px;
+    min-height: 400px;
+  }
+
+  .project-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-hero p {
+    font-size: 1rem;
+  }
+
+  .projects-section {
+    width: 95%;
+    padding: 40px 15px;
+  }
+
+  .projects-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+
+  .featured-project {
+    width: 95%;
+    padding: 30px 15px;
+  }
+
+  .featured-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .featured-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 40px 10px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

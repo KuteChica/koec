@@ -898,3 +898,27 @@ nav a:hover {
     font-size: 12px;
   }
 }
+/* === Testimonial cards container === */
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
+      margin-bottom: 20px;
+      
+}
+/* === Each testimonial box === */
+.testimonial {
+
+  flex: 1 1 300px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1s ease forwards;
+}
