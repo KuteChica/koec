@@ -619,3 +619,179 @@ nav a:hover {
     font-size: 20px;
   }
 }
+/* === ENHANCED MOBILE PATCH (768px and below) === */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .log {
+    font-size: 2.4rem;
+    margin-left: 0;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4),
+                 0 0 10px rgba(128, 0, 0, 0.6);
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 8px 12px;
+    background-color: maroon;
+    border: 1px solid #f5b342;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  nav a:hover {
+    background-color: #f5b342;
+    color: maroon;
+  }
+
+  /* Big Container */
+  .bigcontainer {
+    width: 95%;
+    margin-top: 80px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .bigcontainer img {
+    position: static;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .main-services h1 {
+    font-size: 42px;
+    font-style: oblique;
+    color: snow;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+                 0 0 10px rgba(255, 255, 255, 0.2);
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInDown 1s ease-out;
+    margin-top: 0;
+  }
+
+  /* Services */
+  .service-box,
+  .service-box.reverse {
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .service-box img {
+    width: 100%;
+    height: 200px;
+    border-bottom: 2px solid maroon;
+  }
+
+  .service-text {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .service-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .service-header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-header h2 {
+    font-size: 22px;
+    text-align: center;
+    color: maroon;
+  }
+
+  .service-text p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    width: 95%;
+    padding: 50px 15px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonials h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  .testimonial {
+    flex: 1 1 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Quote Section */
+  .get-quote h2 {
+    font-size: 1.5rem;
+  }
+
+  .get-quote p {
+    font-size: 0.95rem;
+  }
+
+  .get-quote .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border: 2px solid maroon;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-about img {
+    margin: auto;
+  }
+
+  .footer h3,
+  .footer h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer p,
+  .footer-links a,
+  .footer-contact a {
+    font-size: 0.95rem;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
