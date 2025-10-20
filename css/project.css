@@ -205,7 +205,7 @@ nav a:hover {
 /* ===== PROJECT HERO ===== */
 .project-hero {
   position: relative;
-  background: url('/images/our.jpg') center/cover no-repeat;
+  background: url('../images/our.jpg') center/cover no-repeat;
   color: #f9f4ef;
   text-align: center;
   padding: 100px 20px;
