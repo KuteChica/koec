@@ -522,7 +522,8 @@ html, body {
 
   .project-hero {
     padding: 60px 15px;
-    min-height: 400px;
+    min-height: 300px;
+    width: 300px;
   }
 
   .project-hero h1 {

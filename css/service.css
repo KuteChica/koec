@@ -470,3 +470,152 @@ nav a:hover {
   opacity: 0.9;
 }
 
+/* === FULL MOBILE RESPONSIVENESS PATCH === */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 0;
+  }
+
+  .log {
+    font-size: 2.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  nav {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  /* Big Container */
+  .bigcontainer {
+    width: 95%;
+    margin-top: 100px;
+    padding: 15px;
+    margin-top: 50px;
+  }
+
+  .bigcontainer img {
+    position: static;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+.main-services h1 {
+  font-size: 50px;
+  font-style: oblique;
+  color: snow;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+               0 0 10px rgba(255, 255, 255, 0.2);
+  font-family: 'Poppins', sans-serif;
+  animation: fadeInDown 1s ease-out;
+  margin-top: 0px;
+  
+}
+
+
+  .service-box,
+  .service-box.reverse {
+    flex-direction: column;
+  }
+
+  .service-box img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .service-text {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .service-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .service-header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-header h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .service-text p {
+    font-size: 16px;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    width: 95%;
+    padding: 50px 15px;
+    margin: 50px auto;
+  }
+
+  .testimonials h2 {
+    font-size: 36px;
+  }
+
+  .testimonial {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+
+  /* Quote Section */
+  .get-quote h2 {
+    font-size: 1.5rem;
+  }
+
+  .get-quote p {
+    font-size: 0.95rem;
+  }
+
+  .get-quote .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about img {
+    margin: auto;
+  }
+
+  .footer h3,
+  .footer h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer p,
+  .footer-links a,
+  .footer-contact a {
+    font-size: 0.95rem;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+}
