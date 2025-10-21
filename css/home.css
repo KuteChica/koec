@@ -390,6 +390,10 @@ body {
   animation: slideDown 1.5s ease forwards;
   animation-delay: 0.8s;
 }
+.we h4{
+  font-size: 1.1rem;
+  color: maroon;
+}
 
 /* Paragraph animation + style */
 .we p {
@@ -955,10 +959,7 @@ body {
     hyphens: auto;            /* allow word breaks for long words */
   }
 
-  .highlight {
-    display: inline-block;    /* keep highlight phrases intact */
-    margin-right: 4px;
-  }
+
 }
 }
   .why-item {
