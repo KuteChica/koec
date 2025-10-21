@@ -59,10 +59,10 @@ body {
   position: fixed;
   top: 0;
   right: -330px;
-  width: 250px;
+  width: 200px;
   height: 100%;
   backdrop-filter: blur(50px);
-  background:rgb(146, 36, 36);
+  background:rgb(51, 49, 49);
   box-shadow: rgba(29, 28, 28, 0.2);
   padding-top: 70px;
   display: flex;
@@ -72,11 +72,12 @@ body {
   padding-left: 30px;
   transition: right 0.4s ease;
   z-index: 1000;
+  border-radius: 50px;
 }
 
 .side-menu a {
   color: rgb(244, 242, 242);
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
 }
 
