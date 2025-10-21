@@ -934,30 +934,33 @@ body {
 
   /* === FIX: WHO WE ARE SPACING ON MOBILE === */
 @media screen and (max-width: 768px) {
+/* === Fix for “Who We Are” spacing issue on phones === */
+@media screen and (max-width: 768px) {
   .we {
     width: 100%;
-    padding: 25px 20px;    /* reduce big spaces on the sides */
-    line-height: 1.6;      /* tighter text spacing */
+    padding: 30px 15px;       /* narrower side padding */
+    margin: 0 auto;
   }
 
   .we h2 {
     font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .we p {
     font-size: 1rem;
-    text-align: justify;
-    margin: 0 auto;
+    line-height: 1.5;         /* tighter vertical spacing */
+    text-align: left;         /* maybe justified or left for better readability */
     word-spacing: 1px;
+    hyphens: auto;            /* allow word breaks for long words */
   }
 
   .highlight {
-    display: inline-block; /* prevent weird spacing */
-    margin-right: 3px;
+    display: inline-block;    /* keep highlight phrases intact */
+    margin-right: 4px;
   }
 }
-
+}
   .why-item {
     width: 100%;
     padding: 15px;
