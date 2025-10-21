@@ -932,13 +932,31 @@ body {
     font-size: 0.95rem;
   }
 
+  /* === FIX: WHO WE ARE SPACING ON MOBILE === */
+@media screen and (max-width: 768px) {
+  .we {
+    width: 100%;
+    padding: 25px 20px;    /* reduce big spaces on the sides */
+    line-height: 1.6;      /* tighter text spacing */
+  }
+
   .we h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
   }
 
   .we p {
     font-size: 1rem;
+    text-align: justify;
+    margin: 0 auto;
+    word-spacing: 1px;
   }
+
+  .highlight {
+    display: inline-block; /* prevent weird spacing */
+    margin-right: 3px;
+  }
+}
 
   .why-item {
     width: 100%;
