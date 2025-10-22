@@ -131,7 +131,7 @@ body {
   position: relative; /* important for overlay */
   overflow: hidden;
   margin-top: 70px;
-    animation: slideBackground 20s infinite ease-in-out;
+    animation: slideBackground 10s infinite ease-in-out;
     transition: background-image 1s ease-in-out;
 
 }
@@ -440,13 +440,14 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 48%;
-  height: 390px;
+  height: 420px;
   margin-left: 3%;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   margin-bottom:40px ;
+  margin-right: 10px;
 }
 
 /* Style each image inside slideshow */
@@ -485,14 +486,15 @@ body {
 .highlight{
     color: maroon;
 }
-/*footer paet*/
+/* ===== FOOTER ===== */
 .footer {
-  background-color: #f4e3d7;  /* soft cream */
-  color: rgb(90, 20, 20);     /* dark maroon text */
+  background-color: #f4e3d7; /* soft cream */
+  color: rgb(90, 20, 20);
   padding: 50px 20px 20px;
   font-family: "Poppins", sans-serif;
 }
 
+/* Container Layout */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -500,36 +502,43 @@ body {
   max-width: 1100px;
   margin: auto;
   gap: 30px;
-
 }
 
-.footer-about, .footer-links, .footer-contact {
+/* Each Column */
+.footer-about,
+.footer-links,
+.footer-contact {
   flex: 1 1 250px;
 }
-.footer-about img{
-      width: 90px;
+
+/* Logo */
+.footer-about img {
+  width: 90px;
   height: 90px;
-  display: flex;
-  margin: 10px;
-
-
+  display: block;
+  margin: 10px 0;
 }
 
-.footer h3, .footer h4 {
-  color: rgb(124, 32, 32); /* your page maroon color */
+/* Headings */
+.footer h3,
+.footer h4 {
+  color: rgb(124, 32, 32);
   margin-bottom: 15px;
   font-weight: 700;
 }
 
+/* Paragraphs */
 .footer p {
   line-height: 1.6;
-  color: rgb(70, 20, 20); /* darker maroon for readability */
+  color: rgb(70, 20, 20);
   font-size: 14px;
 }
 
+/* Links */
 .footer-links ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-links ul li {
@@ -544,9 +553,10 @@ body {
 }
 
 .footer-links a:hover {
-  color: #b45c3c; /* warm brownish-maroon accent */
+  color: #b45c3c;
 }
 
+/* Contact Links */
 .footer-contact a {
   color: #b45c3c;
   text-decoration: none;
@@ -557,9 +567,23 @@ body {
   color: rgb(124, 32, 32);
 }
 
+/* Social Icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.social-icons .follow-text {
+  font-weight: 600;
+  color: rgb(90, 20, 20);
+  margin-right: 5px;
+}
+
 .social-icons a {
   color: rgb(90, 20, 20);
-  margin-right: 10px;
   font-size: 18px;
   transition: transform 0.3s, color 0.3s;
 }
@@ -569,6 +593,7 @@ body {
   transform: scale(1.2);
 }
 
+/* Footer Bottom */
 .footer-bottom {
   text-align: center;
   border-top: 1px solid rgba(90, 20, 20, 0.3);
@@ -578,6 +603,40 @@ body {
   color: rgb(90, 20, 20);
   opacity: 0.9;
 }
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-about img {
+    margin: 0 auto 10px;
+  }
+
+  .footer-links ul {
+    padding: 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social-icons .follow-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+
 /*why choose us part*/
 
     
@@ -948,6 +1007,7 @@ body {
 .image-slideshow{
   margin-top: 40px;
   margin-bottom: 10px;
+  margin-right: 100px;
 }
 
 }
