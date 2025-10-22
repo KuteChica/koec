@@ -5,13 +5,22 @@ body {
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
 }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* prevents sideways scroll on phones */
+  box-sizing: border-box;
+}
+
 /* ===== HEADER ===== */
 header {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* keeps header centered on all screens */
-  display: flex;
+  left: 0;
+  transform: none;
+  width: 100%;
+  box-sizing: border-box;
+
   justify-content: center; /* centers nav and logo */
   align-items: center;
   padding: 10px 30px;
@@ -56,8 +65,13 @@ nav a:hover {
 .bigcontainer {
   background-color: #f9f4ef;
   border-radius: 30px;
-  width: 1450px;
-  margin: 10px auto;
+  width: 90%;
+  max-width: 1450px;
+  margin: 100px auto;
+  padding: 20px;
+  box-sizing: border-box;
+
+
   padding: 20px;
   margin-top: 60px;
   margin-bottom: 100px;
