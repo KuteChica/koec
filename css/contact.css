@@ -31,9 +31,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  width: 100%;
+  gap: 50px;
+  flex-wrap: wrap; /* helps on smaller screens */
 }
 
 nav a {
@@ -47,7 +46,7 @@ nav a {
 
 nav a:hover {
   background-color: #f5b342;
-  color: maroon;
+  color: white;
 }
 
 /* ===== HERO SECTION ===== */
@@ -330,24 +329,34 @@ nav a:hover {
 }
 
 /* ===== MOBILE RESPONSIVE FIX ===== */
+/* === FULL MOBILE RESPONSIVENESS PATCH === */
 @media screen and (max-width: 768px) {
+  /* Header */
   header {
-    flex-direction: column;
+    width: 100%;
     height: auto;
-    padding: 15px;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 0;
+  }
+
+  .log {
+    font-size: 2.5rem;
+    margin-left: 0;
+    text-align: center;
   }
 
   nav {
-    flex-direction: row;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
   }
 
   nav a {
     font-size: 14px;
-    padding: 6px 10px;
+    padding: 6px 8px;
   }
+
 
   .try {
     height: 380px;
@@ -387,5 +396,47 @@ nav a:hover {
 
   .footer p, .footer-links a, .footer-contact a {
     font-size: 0.95rem;
+  }
+}
+/* === ENHANCED MOBILE PATCH (768px and below) === */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .log {
+    font-size: 2.4rem;
+    margin-left: 0;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4),
+                 0 0 10px rgba(128, 0, 0, 0.6);
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 8px 12px;
+    background-color: maroon;
+    border: 1px solid #f5b342;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  nav a:hover {
+    background-color: #f5b342;
+    color: maroon;
   }
 }
