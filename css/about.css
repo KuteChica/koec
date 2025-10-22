@@ -1,28 +1,34 @@
-/* ===== BODY ===== */
 body {
-  background-color: rgb(124, 32, 32);
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f4ef;
+  color: #333;
+}
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 /* ===== HEADER ===== */
 header {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* keeps header centered on all screens */
+  left: 0;
+  width: 100%;                     /* fits any screen */
   display: flex;
-  justify-content: center; /* centers nav and logo */
+  justify-content: space-between;  /* separates logo & links neatly */
   align-items: center;
   padding: 10px 30px;
   background-color: maroon;
   flex-wrap: wrap;
-  width: 1390px; /* your original width */
-  height: 40px; /* your original height */
+  height: auto;                    /* adjusts automatically */
   margin-top: 0;
-  border-radius: 10px;
-  z-index: 1000; /* makes sure it stays on top */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* optional nice shadow */
+  border-radius: 0;                /* prevents rounded edges causing scrolls */
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;          /* ensures consistent sizing */
 }
 
 
@@ -51,12 +57,15 @@ nav a:hover {
 /* ===== HERO SECTION ===== */
 
 
-
 /* ===== BIG CONTAINER ===== */
 .bigcontainer {
   background-color: #f9f4ef;
   border-radius: 30px;
-  width: 1450px;
+ width: 90%;
+  max-width: 1450px;
+  margin: 100px auto;
+  padding: 20px;
+  box-sizing: border-box;
   margin: 10px auto;
   padding: 20px;
   margin-top: 60px;
@@ -92,26 +101,206 @@ nav a:hover {
   position: absolute;
   top: 58px;
 }
+/* ===== HERO SECTION ===== */
+.about-hero {
+  background: url('../images/construction2.jpg') center/cover no-repeat;
+  height: 65vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  animation: bgZoom 8s ease-in-out forwards;
+}
 
+.about-hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
 
+.about-hero .hero-text {
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 1.5s ease-out;
+}
 
+.about-hero h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
 
+.about-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
 
+/* ===== HERO ANIMATIONS ===== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes bgZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
 
+/* ===== INTRO ===== */
+.about-intro {
+  padding: 80px 20px;
+  background-color: #fff;
+}
 
+.about-intro .container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
 
+.about-intro h2 {
+  color: maroon;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
 
+/* ===== VISION & MISSION ===== */
+.vision-mission .container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 20px;
+}
 
+.vision-mission .card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
+.vision-mission .card:hover {
+  transform: translateY(-6px);
+}
 
+.vision-mission h3 {
+  color: maroon;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
 
+/* ===== CORE VALUES ===== */
+.core-values {
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
 
+.core-values h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
 
-/*footer part*/
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.value-box {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.value-box:hover {
+  background: gold;
+  color: maroon;
+  transform: translateY(-5px);
+}
+
+/* ===== WHY CHOOSE US ===== */
+.why-us {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.why-us .container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.why-us h2 {
+  color: maroon;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.why-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-us li {
+  background: #f9f4ef;
+  margin: 10px 0;
+  padding: 12px 20px;
+  border-left: 5px solid maroon;
+  border-radius: 8px;
+}
+
+/* ===== CTA ===== */
+.call-to-action {
+  background: maroon;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.call-to-action .cta-btn {
+  display: inline-block;
+  background: gold;
+  color: maroon;
+  padding: 12px 30px;
+  border-radius: 25px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.call-to-action .cta-btn:hover {
+  background: white;
+  color: maroon;
+}
+
+/* ===== FOOTER ===== */
 .footer {
-  background-color: #f4e3d7;  /* soft cream */
-  color: rgb(90, 20, 20);     /* dark maroon text */
+  background-color: #f4e3d7;
+  color: rgb(90, 20, 20);
   padding: 50px 20px 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -123,30 +312,28 @@ nav a:hover {
   max-width: 1100px;
   margin: auto;
   gap: 30px;
-
 }
 
 .footer-about, .footer-links, .footer-contact {
   flex: 1 1 250px;
 }
+
 .footer-about img{
-      width: 90px;
+  width: 90px;
   height: 90px;
   display: flex;
   margin: 10px;
-
-
 }
 
 .footer h3, .footer h4 {
-  color: rgb(124, 32, 32); /* your page maroon color */
+  color: rgb(124, 32, 32);
   margin-bottom: 15px;
   font-weight: 700;
 }
 
 .footer p {
   line-height: 1.6;
-  color: rgb(70, 20, 20); /* darker maroon for readability */
+  color: rgb(70, 20, 20);
   font-size: 14px;
 }
 
@@ -167,7 +354,7 @@ nav a:hover {
 }
 
 .footer-links a:hover {
-  color: #b45c3c; /* warm brownish-maroon accent */
+  color: #b45c3c;
 }
 
 .footer-contact a {
@@ -201,3 +388,131 @@ nav a:hover {
   color: rgb(90, 20, 20);
   opacity: 0.9;
 }
+
+/* === FULL MOBILE RESPONSIVENESS PATCH === */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 0;
+  }
+
+  .log {
+    font-size: 2.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  nav {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  /* Big Container */
+  .bigcontainer {
+    width: 95%;
+    margin-top: 100px;
+    padding: 15px;
+    margin-top: 50px;
+  }
+
+  .bigcontainer img {
+    position: static;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  .about-hero {
+    height: 55vh;
+    background-position: center;
+  }
+
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .vision-mission .container {
+    flex-direction: column;
+  }
+
+  .core-values h2, .why-us h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-about img {
+    margin: auto;
+  }
+}
+/* === ENHANCED MOBILE PATCH (768px and below) === */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .log {
+    font-size: 2.4rem;
+    margin-left: 0;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4),
+                 0 0 10px rgba(128, 0, 0, 0.6);
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 8px 12px;
+    background-color: maroon;
+    border: 1px solid #f5b342;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  nav a:hover {
+    background-color: #f5b342;
+    color: maroon;
+  }
+}
+/* Big Container */
+  .bigcontainer {
+    width: 95%;
+    margin-top: 170px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .bigcontainer img {
+    position: static;
+    margin: 0 auto 20px;
+    display: block;
+  }
